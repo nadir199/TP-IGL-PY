@@ -1,5 +1,5 @@
 import unittest
-
+import VectorHelper
 class VectorHelperTest(unittest.TestCase):
     def test_trierVecteur(self):
         test_case=[10,9,30,2,2,11,20,30,-5,0]
