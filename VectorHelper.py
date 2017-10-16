@@ -1,4 +1,7 @@
 class VectorHelper:
+    def __init__(self):
+        pass
+
     @staticmethod
     def trierVecteur(vecteur):
         for j in range(1,len(vecteur)):
@@ -7,3 +10,6 @@ class VectorHelper:
                     tmp=vecteur[j]
                     vecteur[j]=vecteur[j+1]
                     vecteur[j+1]=tmp
+        return vecteur
+
+
