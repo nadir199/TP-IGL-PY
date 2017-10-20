@@ -62,6 +62,14 @@ class VectorHelper:
 
     @staticmethod
     def inverserVecteur(vect):
+        """
+        Inverse le vecteur :vect
+
+        Args:
+            :type vect: int[]
+            :param vect: un tableau de nombres
+
+        """
         tai=len(vect)
         for i in range(0,int(tai/2)):
             tmp=vect[i]
