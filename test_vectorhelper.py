@@ -5,6 +5,9 @@ from VectorHelper import DifferentSizeVectorsException
 class VectorHelperTest(unittest.TestCase):
     #General case test
     def test_trierVecteur(self):
+        """
+        Teste le fonctionnement de la fonction *trierVecteur* qui trie le vecteur donne en parametre
+        """
         test_case=[10,9,30,2,2,11,20,30,-5,0]
         VectorHelper.trierVecteur(test_case)
         trie=True
@@ -15,10 +18,16 @@ class VectorHelperTest(unittest.TestCase):
         self.assertTrue(trie)
     #Test for empty array
     def testVide_trierVecteur(self):
+        """
+        Teste le cas du tri d'un tableau vide
+        """
         res=VectorHelper.trierVecteur([])
         self.assertTrue([]==res)
 
     def test_sommerVecteurs(self):
+        """
+        Teste le fonctionnement de la fonction *sommerVecteurs* qui somme deux vecteurs
+        """
         vecteur1=[10,9,23,2,11,2,1,3,10]
         vecteur2=[10,11,7,8,9,18,19,17,10]
         vecteur3=VectorHelper.sommerVecteurs(vecteur1,vecteur2)
@@ -29,12 +38,15 @@ class VectorHelperTest(unittest.TestCase):
                 break
         self.assertFalse(error)
     def testException_sommerVecteurs(self):
+        """
+        Teste qu'une exception est generee si les tailles des vecteurs sont differentes
+        """
         vecteur1=[11,3,10]
         vecteur2=[11,3]
         with self.assertRaises(DifferentSizeVectorsException):
             VectorHelper.sommerVecteurs(vecteur1,vecteur2)
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(verbosity=2)
 
 
