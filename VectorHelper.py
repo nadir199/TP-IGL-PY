@@ -36,18 +36,6 @@ class VectorHelper:
 
             >>> minMax([1,2,3,4])
             [1,4]
-            
-            
-     @staticmethod 
-    def inverserVecteur(vecteur):
-        vec = []
-        k = 0
-        for i in vecteur[::-1]: 
-            vec[k] = i
-            k = k + 1 
-
-        return vec
-             
 
         """
 
@@ -67,3 +55,31 @@ class VectorHelper:
         liste[1] = max 
 
         return liste
+
+    
+                  
+       @staticmethod 
+      def inverserVecteur(vecteur):
+        """
+        
+        Cette fonction permet de retourner l'inverse du vecteur en entrée. 
+
+            :param vecteur: Un tableau d'entier 
+            :return: Un tableau d'entier
+            :rtype: int[]
+
+            :example: 
+
+            >>> inverserVecteur([1,2,3,4])
+            [4,3,2,1]
+             
+
+        """
+        vec = []
+        k = 0
+        for i in vecteur[::-1]: 
+            vec[k] = i
+            k = k + 1 
+
+        return vec
+             
