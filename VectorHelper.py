@@ -17,7 +17,7 @@ class VectorHelper:
 
         Args:
             :type vecteur: int[]
-            :param vecteur: an array of numbers
+            :param vecteur: un tableau de nombres
 
         Returns:
             Le vecteur trie.
@@ -30,3 +30,29 @@ class VectorHelper:
                     vecteur[i]=vecteur[i+1]
                     vecteur[i+1]=tmp
         return vecteur
+
+    @staticmethod
+    def sommerVecteurs(vect1, vect2):
+        """
+        Somme les deux vecteurs :vect1 et :vect2 element par element
+
+        Args:
+            :type vect1: int[]
+            :param vect1: un tableau de nombres
+
+            :type vect2: int[]
+            :param vect2: un tableau de nombres
+
+            Les deux vecteurs :vect1 et :vect2 doivent etre de meme taille
+
+
+        Returns:
+            :int[] La somme des elements de :vect1 et :vect2 element par element
+
+        Raises:
+            :DifferentSizeVectorsException: si :vect1: et :vect2: sont de tailles differents
+        """
+        pass
+class DifferentSizeVectorsException(Exception):
+    def __init__(self):
+        Exception.__init__(self,"Les vecteurs doivent avoir la meme taille")
