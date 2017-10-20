@@ -32,3 +32,17 @@ class VectorHelperTest(unittest.TestCase):
 
 
         self.assertTrue(error)
+        
+        
+      def test_inverserVecteur(self):
+
+            test_case=[10,9,30,2,2,11,20,30,-5,0]
+            test_result = [0,-5,30,20,11,2,2,30,9,10]
+            vec = VectorHelper.inverserVecteur(test_case)
+
+            error = false
+            for i in range(len(test_case)):
+                if vec[i] != test_result[i]:
+                    error = true
+
+            self.assertTrue(error)
