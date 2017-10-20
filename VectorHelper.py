@@ -52,7 +52,13 @@ class VectorHelper:
         Raises:
             :DifferentSizeVectorsException: si :vect1: et :vect2: sont de tailles differents
         """
-        pass
+
+        if len(vect1)!=len(vect2):
+            raise DifferentSizeVectorsException()
+        vect3 = [None]*len(vect1)
+        for i in range(0,len(vect1)-1):
+            vect3[i]=vect1[i]+vect2[i]
+        return vect3
 class DifferentSizeVectorsException(Exception):
     def __init__(self):
         Exception.__init__(self,"Les vecteurs doivent avoir la meme taille")
