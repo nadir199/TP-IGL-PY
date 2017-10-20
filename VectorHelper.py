@@ -36,6 +36,17 @@ class VectorHelper:
 
             >>> minMax([1,2,3,4])
             [1,4]
+            
+            
+     @staticmethod 
+    def inverserVecteur(vecteur):
+        vec = []
+        k = 0
+        for i in vecteur[::-1]: 
+            vec[k] = i
+            k = k + 1 
+
+        return vec
              
 
         """
