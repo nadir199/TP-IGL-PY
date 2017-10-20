@@ -1,5 +1,7 @@
 import unittest
 from VectorHelper import VectorHelper
+from VectorHelper import DifferentSizeVectorsException
+
 class VectorHelperTest(unittest.TestCase):
     #General case test
     def test_trierVecteur(self):
@@ -26,7 +28,11 @@ class VectorHelperTest(unittest.TestCase):
                 error=True
                 break
         self.assertFalse(error)
-
+    def testException_sommerVecteurs(self):
+        vecteur1=[11,3,10]
+        vecteur2=[11,3]
+        with self.assertRaises(DifferentSizeVectorsException):
+            VectorHelper.sommerVecteurs(vecteur1,vecteur2)
 
 if __name__ == '__main__':
     unittest.main()
