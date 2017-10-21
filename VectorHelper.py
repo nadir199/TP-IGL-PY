@@ -1,7 +1,5 @@
 """
-
 Ceci est un programme de manipulation de vecteurs
-
 """
 
 class VectorHelper:
