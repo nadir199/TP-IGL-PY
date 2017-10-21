@@ -2,8 +2,16 @@ import unittest
 from VectorHelper import VectorHelper
 
 class VectorHelperTest(unittest.TestCase):
-
+    """
+    
+        Cette classe teste les méthodes de la classe 'VectorHelper'
+        
+    """
+    
     def test_appFormule(self):
+        """
+            Test de la méthode 'appFormule' qui multiplie par 2 les elements du vecteur argument.
+        """
 
         test_case=[10,9,30,2,2,11,20,30,-5,0]
         vec = VectorHelper.appFormule(test_case)
@@ -17,6 +25,9 @@ class VectorHelperTest(unittest.TestCase):
         self.assertTrue(error)
         
     def test_minMax(self):
+        """ 
+            Test de la méthode 'minMax' qui retourne le minimum et le maximum d'un vecteur d'entier. 
+        """
 
         test_case=[10,9,30,2,2,11,20,30,-5,0]
         min = -5
@@ -35,6 +46,9 @@ class VectorHelperTest(unittest.TestCase):
         
         
       def test_inverserVecteur(self):
+            """ 
+                Test de la méthode 'inverserVecteur' qui inverse les elements du vecteur argument. 
+            """
 
             test_case=[10,9,30,2,2,11,20,30,-5,0]
             test_result = [0,-5,30,20,11,2,2,30,9,10]
