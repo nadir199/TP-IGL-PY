@@ -20,6 +20,7 @@ class VectorHelperTest(unittest.TestCase):
         for i in range(0,len(test_case)): 
         	if vec[i] != test_case[i] * 2:
         		error = false
+                break
 
 
         self.assertTrue(error)
@@ -58,5 +59,6 @@ class VectorHelperTest(unittest.TestCase):
             for i in range(len(test_case)):
                 if vec[i] != test_result[i]:
                     error = true
+                    break
 
             self.assertTrue(error)
