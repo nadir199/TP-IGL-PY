@@ -62,3 +62,4 @@ class VectorHelperTest(unittest.TestCase):
                     break
 
             self.assertTrue(error)
+
