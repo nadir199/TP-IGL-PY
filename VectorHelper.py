@@ -60,24 +60,6 @@ class VectorHelper:
             vect3[i]=vect1[i]+vect2[i]
         return vect3
 
-    @staticmethod
-    def inverserVecteur(vect):
-        """
-        Inverse le vecteur :vect
-
-        Args:
-            :type vect: int[]
-            :param vect: un tableau de nombres
-
-        """
-        tai=len(vect)
-        for i in range(0,int(tai/2)):
-            tmp=vect[i]
-            vect[i]=vect[tai-1-i]
-            vect[tai-1-i]=tmp
-
-        return vect
-
 class DifferentSizeVectorsException(Exception):
     def __init__(self):
         Exception.__init__(self,"Les vecteurs doivent avoir la meme taille")
