@@ -70,28 +70,27 @@ class VectorHelper:
 
     
                   
-      @staticmethod 
-      def inverserVecteur(vect):
+    @staticmethod
+    def inverserVecteur(vect):
         """
-        
-        Cette fonction permet de retourner l'inverse du vecteur en entrée. 
 
-        args: 
-        
-            :param vecteur: Un tableau d'entier 
+        Cette fonction permet de retourner l'inverse du vecteur en entrée.
+
+        args:
+
+            :param vecteur: Un tableau d'entier
             :return: Un tableau d'entier
             :rtype: int[]
 
-       :example: >>> inverserVecteur([1,2,3,4])
+        :example: >>> inverserVecteur([1,2,3,4])
                      [4,3,2,1]
-             
+
 
         """
         vec = []
         k = 0
-        for i in vect[::-1]: 
+        for i in vect[::-1]:
             vec[k] = i
-            k = k + 1 
+            k = k + 1
 
         return vec
-             
