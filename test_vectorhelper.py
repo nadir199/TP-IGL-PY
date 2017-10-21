@@ -44,21 +44,34 @@ class VectorHelperTest(unittest.TestCase):
 
 
         self.assertTrue(error)
-        
-        
-    def test_inverserVecteur(self):
-        """
-            Test de la méthode 'inverserVecteur' qui inverse les elements du vecteur argument.
-        """
 
-        test_case=[10,9,30,2,2,11,20,30,-5,0]
-        test_result = [0,-5,30,20,11,2,2,30,9,10]
-        vec = VectorHelper.inverserVecteur(test_case)
-
-        error = false
-        for i in range(len(test_case)):
-            if vec[i] != test_result[i]:
-                error = true
+    def testPair_inverserVecteur(self):
+        vecteur = [1, 2, 3, 4, 5, 6]
+        saveVect = [1, 2, 3, 4, 5, 6]
+        VectorHelper.inverserVecteur(vecteur)
+        inverted = True
+        for i in range(0, len(vecteur) - 1):
+            if vecteur[i] != saveVect[len(vecteur) - 1 - i]:
+                inverted = False
                 break
+        self.assertTrue(inverted)
 
-        self.assertTrue(error)
+    def testImpair_inverserVecteur(self):
+        vecteur = [1, 2, 3, 4, 5]
+        saveVect = [1, 2, 3, 4, 5]
+        VectorHelper.inverserVecteur(vecteur)
+        inverted = True
+        for i in range(0, len(vecteur) - 1):
+            if vecteur[i] != saveVect[len(vecteur) - 1 - i]:
+                inverted = False
+                break
+        self.assertTrue(inverted)
+
+    def testEmptyAndOne_inverserVecteur(self):
+        vecteur = []
+        VectorHelper.inverserVecteur(vecteur)
+        self.assertTrue(vecteur == [])
+
+        vecteurOne = [1]
+        VectorHelper.inverserVecteur(vecteurOne)
+        self.assertTrue(vecteurOne == [1])
