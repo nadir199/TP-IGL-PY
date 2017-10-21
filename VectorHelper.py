@@ -3,16 +3,14 @@ Ceci est un programme de manipulation de vecteurs
 """
 
 class VectorHelper:
-    
     """
         Cette classe est une classe utilitaire de manipulation des vecteurs d'entiers.
-        
     """
     
     def __init__(self):
         pass
 
-     @staticmethod
+    @staticmethod
     def appFormule(vecteur):
         """
         
@@ -73,7 +71,7 @@ class VectorHelper:
     
                   
       @staticmethod 
-      def inverserVecteur(vecteur):
+      def inverserVecteur(vect):
         """
         
         Cette fonction permet de retourner l'inverse du vecteur en entrée. 
@@ -91,7 +89,7 @@ class VectorHelper:
         """
         vec = []
         k = 0
-        for i in vecteur[::-1]: 
+        for i in vect[::-1]: 
             vec[k] = i
             k = k + 1 
 
