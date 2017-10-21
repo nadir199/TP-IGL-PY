@@ -68,29 +68,20 @@ class VectorHelper:
 
         return liste
 
-    
-                  
     @staticmethod
     def inverserVecteur(vect):
         """
+        Inverse le vecteur :vect
 
-        Cette fonction permet de retourner l'inverse du vecteur en entrée.
-
-        args:
-
-            :param vecteur: Un tableau d'entier
-            :return: Un tableau d'entier
-            :rtype: int[]
-
-        :example: >>> inverserVecteur([1,2,3,4])
-                     [4,3,2,1]
-
+        Args:
+            :type vect: int[]
+            :param vect: un tableau de nombres
 
         """
-        vec = []
-        k = 0
-        for i in vect[::-1]:
-            vec[k] = i
-            k = k + 1
+        tai = len(vect)
+        for i in range(0, int(tai / 2)):
+            tmp = vect[i]
+            vect[i] = vect[tai - 1 - i]
+            vect[tai - 1 - i] = tmp
 
-        return vec
+        return vect
